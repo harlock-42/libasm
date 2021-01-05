@@ -1,9 +1,8 @@
-#include <unistd.h>
+#include "../include/libasm.h"
 
-void	ft_write(int fd, const void *buf, size_t count);
 
 int	main(void)
 {
-	ft_write(1, "bonjour", 7);
+	ft_write_test();
 	return (0);
 }

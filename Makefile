@@ -14,9 +14,16 @@ SFLAGS		=	-f elf64
 
 CFLAGS		=	-c
 
+HEADER_NAME	=	libasm.h
+
+HEADER_PATH	=	./include
+
+HEADER		=	$(addprefix $(HEADER_PATH)/, $(HEADER_NAME))
+
 SRC_ASM_NAME		+=	ft_write.s
 
 SRC_C_NAME		+=	main.c
+SRC_C_NAME		+=	ft_write_test.c
 
 OBJ_ASM_NAME		=	$(SRC_ASM_NAME:.s=.o)
 
@@ -44,7 +51,7 @@ LIB_ASM			=	$(addprefix $(LIB_PATH)/, $(LIB_ASM_NAME))
 
 all: $(NAME)
 
-$(NAME): $(LIB_ASM) $(OBJ_C_PATH) $(OBJ_C)
+$(NAME): $(HEADER) $(LIB_ASM) $(OBJ_C_PATH) $(OBJ_C)
 	@$(CC) -o $(NAME) $(OBJ_C) $(LIB_ASM)
 
 $(OBJ_C_PATH):
