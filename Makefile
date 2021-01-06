@@ -1,5 +1,11 @@
 NAME		=	libasm
 
+LIBFT_NAME	=	libft.a
+
+LIBFT_PATH	=	./libft
+
+LIBFT		=	$(addprefix $(LIBFT_PATH)/, $(LIBFT_NAME))
+
 LIB_ASM_NAME	=	libasm.a
 
 CC		=	clang
@@ -51,8 +57,11 @@ LIB_ASM			=	$(addprefix $(LIB_PATH)/, $(LIB_ASM_NAME))
 
 all: $(NAME)
 
-$(NAME): $(HEADER) $(LIB_ASM) $(OBJ_C_PATH) $(OBJ_C)
-	@$(CC) -o $(NAME) $(OBJ_C) $(LIB_ASM)
+$(NAME): $(HEADER) $(LIBFT) $(LIB_ASM) $(OBJ_C_PATH) $(OBJ_C)
+	@$(CC) -o $(NAME) $(OBJ_C) $(LIB_ASM) $(LIBFT)
+
+$(LIBFT):
+	@(cd $(LIBFT_PATH) && $(MAKE))
 
 $(OBJ_C_PATH):
 	@mkdir $(OBJ_C_PATH)
@@ -76,9 +85,11 @@ $(LIB_PATH):
 clean:
 	@$(RM) $(OBJ_ASM_PATH)
 	@$(RM) $(OBJ_C_PATH)
+	@(cd $(LIBFT_PATH) && $(MAKE) clean)
 
 fclean: clean
 	@$(RM) $(LIB_PATH)
 	@$(RM) $(NAME)
+	@(cd $(LIBFT_PATH) && $(MAKE) fclean)
 
 re: fclean all

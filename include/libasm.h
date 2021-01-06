@@ -3,6 +3,9 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+#include "libft.h"
 
 /*
 ** #######################
@@ -46,12 +49,17 @@
 ** ####### LIBASM ########
 */
 
-void	ft_write(int fd, const void *buf, size_t count);
+int	ft_write(int fd, const void *buf, size_t count);
 
 /*
 ** ######## TEST #########
 */
 
 void	ft_write_test(void);
+
+/* 
+** ######## OTHER ########
+*/
+
 
 # endif
