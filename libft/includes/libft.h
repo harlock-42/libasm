@@ -53,7 +53,7 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlen(const char *str);
 char			*ft_itoa(int n);
 char			*ft_strchr(const char *s, int c);
-char			*ft_strcpy(char *dst, char const *src);
+//char			*ft_strcpy(char *dst, char const *src);
 char			*ft_strdup(const char *s1);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
