@@ -23,7 +23,7 @@ void	ft_strcmp_test(void)
 	char	*dst[nb_test];
 	char	*src[nb_test];
 
-	dst[0] = ft_strdup("");
+	dst[0] = ft_strdup("yl");
 	src[0] = "yo";
 	dst[1] = ft_strdup("yo");
 	src[1] = "yolo";
