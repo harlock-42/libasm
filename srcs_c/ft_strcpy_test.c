@@ -61,6 +61,7 @@ void	ft_strcpy_test(void)
 		
 		++i;
 	}
+/*
 		ft_printf("%stest NULL%s\n", PURPLE, NC);
 		ft_printf("---------\n");
 
@@ -77,5 +78,5 @@ void	ft_strcpy_test(void)
 		ft_ret = ft__strcpy("salut", NULL);
 		ft_printf("%s", NC);
 		ft_printf("|--> %s%p%s\n", GREY, ft_ret, NC);
-
+*/
 }

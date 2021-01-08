@@ -18,7 +18,7 @@ loop:
 	jmp	loop
 
 end:
-	mov	rax, rsi
+	mov	rax, rdi
 	ret
 
 ret_null:
