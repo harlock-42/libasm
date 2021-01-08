@@ -1,7 +1,7 @@
 	section		.text
-	global		ft_strlen
+	global		ft__strlen
 
-ft_strlen:
+ft__strlen:
 	mov	rcx, 0
 	cmp	rdi, 0
 	je	end

@@ -50,15 +50,17 @@
 ** ####### LIBASM ########
 */
 
-int	ft_strcmp(const char *s1, const char *s2);
-char	*ft_strcpy(char *dst, const char *src);
-size_t	ft_strlen(const char *str);
-int	ft_write(int fd, const void *buf, size_t count);
+ssize_t	ft__read(int fd, void *buf, size_t count);
+int	ft__strcmp(const char *s1, const char *s2);
+char	*ft__strcpy(char *dst, const char *src);
+size_t	ft__strlen(const char *str);
+int	ft__write(int fd, const void *buf, size_t count);
 
 /*
 ** ######## TEST #########
 */
 
+void	ft_read_test(void);
 void	ft_strcmp_test(void);
 void	ft_strcpy_test(void);
 void	ft_strlen_test(void);

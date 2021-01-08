@@ -44,7 +44,7 @@ void	ft_strlen_test(void)
 		ft_printf("*** %sft_strlen%s ***\n", BLACK, NC);
 		
 		ft_printf("%s", GREY);
-		ft_ret = ft_strlen(test[i]);
+		ft_ret = ft__strlen(test[i]);
 		ft_printf("%s", NC);
 		ft_printf("|--> %s%d%s\n", GREY, ft_ret, NC);
 		
@@ -67,7 +67,7 @@ void	ft_strlen_test(void)
 
 	ft_printf("*** %sft_strlen%s ***\n", BLACK, NC);
 	ft_printf("%s", GREY);
-	ft_ret = ft_strlen(NULL);
+	ft_ret = ft__strlen(NULL);
 	ft_printf("%s", NC);
 	ft_printf("|--> %s%d%s\n", GREY, ft_ret, NC);
 }

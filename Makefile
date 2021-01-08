@@ -26,11 +26,13 @@ HEADER_PATH	=	./include
 
 HEADER		=	$(addprefix $(HEADER_PATH)/, $(HEADER_NAME))
 
-SRC_ASM_NAME		+=	ft_strcmp.s
-SRC_ASM_NAME		+=	ft_strcpy.s
-SRC_ASM_NAME		+=	ft_strlen.s
-SRC_ASM_NAME		+=	ft_write.s
+SRC_ASM_NAME		+=	ft__read.s
+SRC_ASM_NAME		+=	ft__strcmp.s
+SRC_ASM_NAME		+=	ft__strcpy.s
+SRC_ASM_NAME		+=	ft__strlen.s
+SRC_ASM_NAME		+=	ft__write.s
 
+SRC_C_NAME		+=	ft_read_test.c
 SRC_C_NAME		+=	ft_strcmp_test.c
 SRC_C_NAME		+=	ft_strcpy_test.c
 SRC_C_NAME		+=	ft_strlen_test.c

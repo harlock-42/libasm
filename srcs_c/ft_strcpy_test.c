@@ -47,7 +47,7 @@ void	ft_strcpy_test(void)
 		ft_printf("*** %sft_strcpy%s ***\n", BLACK, NC);
 		
 		ft_printf("%s", GREY);
-		ft_ret = ft_strcpy(dst[i], src[i]);
+		ft_ret = ft__strcpy(dst[i], src[i]);
 		ft_printf("%s", NC);
 		ft_printf("|--> %s%s%s\n", GREY, ft_ret, NC);
 
@@ -67,14 +67,14 @@ void	ft_strcpy_test(void)
 		ft_printf("*** %sdst = NULL%s ***\n", BLACK, NC);
 		
 		ft_printf("%s", GREY);
-		ft_ret = ft_strcpy(NULL, "salut");
+		ft_ret = ft__strcpy(NULL, "salut");
 		ft_printf("%s", NC);
 		ft_printf("|--> %s%s%s\n", GREY, ft_ret, NC);
 
 		ft_printf("*** %ssrc = NULL%s ***\n", BLACK, NC);
 		
 		ft_printf("%s", GREY);
-		ft_ret = ft_strcpy("salut", NULL);
+		ft_ret = ft__strcpy("salut", NULL);
 		ft_printf("%s", NC);
 		ft_printf("|--> %s%p%s\n", GREY, ft_ret, NC);
 

@@ -1,8 +1,8 @@
 	section		.text
-	global		ft_write
+	global		ft__write
 	extern		__errno_location
 
-ft_write:
+ft__write:
 	mov	rax, 1
 	syscall
 	cmp	rax, 0

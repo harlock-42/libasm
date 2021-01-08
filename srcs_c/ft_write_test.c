@@ -48,7 +48,7 @@ void		ft_write_test(void)
 		ft_printf("*** %sft_write%s ***\n", BLACK, NC);
 		
 		ft_printf("%s", GREY);
-		ft_ret = ft_write(1, test[i], len[i]);
+		ft_ret = ft__write(1, test[i], len[i]);
 		error = errno;
 		ft_printf("%s", NC);
 		ft_printf("|--> %s%d%s\n", GREY, ft_ret, NC);
@@ -75,7 +75,7 @@ void		ft_write_test(void)
 
 	ft_printf("*** %sft_write%s ***\n", BLACK, NC);
 	ft_printf("%s", GREY);
-	ft_ret = ft_write(10, "salut", 6);
+	ft_ret = ft__write(10, "salut", 6);
 	error = errno;
 	ft_printf("%s", NC);
 	ft_printf("|--> %s%d%s\n", GREY, ft_ret, NC);
