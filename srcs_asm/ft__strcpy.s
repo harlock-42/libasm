@@ -2,25 +2,24 @@
 	global		ft__strcpy
 
 ft__strcpy:
-	mov	rcx, 0
+	xor	rcx, rcx	; init counter
 	cmp	rsi, 0
-	je	ret_null
+	je	ret_null	; if av[1] is NULL --> ret_null
 	cmp	rdi, 0
-	je	ret_null
-	call	loop
+	je	ret_null	; if (av[2] is NULL --> ret_null
 
 loop:
-	mov	dl, byte [rsi + rcx]
-	mov	byte [rdi + rcx], dl
-	cmp	dl, 0
+	mov	dl, byte [rsi + rcx]	; put src[i] into a buffer
+	mov	byte [rdi + rcx], dl	; dst[i] = buffer
+	cmp	dl, 0	; if buffer = 0 --> break
 	je	end
-	inc	rcx
+	inc	rcx	; counter++
 	jmp	loop
 
 end:
-	mov	rax, rdi
+	mov	rax, rdi	; return dst
 	ret
 
 ret_null:
-	mov	rax, 0
+	mov	rax, 0		; return NULL
 	ret

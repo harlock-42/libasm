@@ -27,11 +27,11 @@ void	ft_strcmp_test(void)
 	s2[0] = "yo";
 	s1[1] = ft_strdup("yo");
 	s2[1] = "yolo";
-	s1[2] = "yofo";
+	s1[2] = ft_strdup("yofo");
 	s2[2] = "yo";
-	s1[3] = "yoao";
+	s1[3] = ft_strdup("yoao");
 	s2[3] = "yo";
-	s1[4] = "";
+	s1[4] = ft_strdup("");
 	s2[4] = "";
 	s1[nb_test - 1] = NULL;
 	s2[nb_test - 1] = NULL;
@@ -62,7 +62,7 @@ void	ft_strcmp_test(void)
 		ft_printf("%s", NC);
 		
 		ft_printf("|--> %s%d%s\n", GREY, ret, NC);
-		
+		free(s1[i]);
 		++i;
 	}
 		ft_printf("%stest NULL%s\n", PURPLE, NC);

@@ -58,6 +58,7 @@ void	ft_strcpy_test(void)
 		ft_printf("%s", NC);
 		
 		ft_printf("|--> %s%s%s\n", GREY, ret, NC);
+		free(dst[i]);
 		
 		++i;
 	}

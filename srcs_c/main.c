@@ -2,8 +2,6 @@
 
 int	main(void)
 {
-	char	*shell;
-
 	ft_write_test();
 	ft_strlen_test();
 	ft_strcpy_test();

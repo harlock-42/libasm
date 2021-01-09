@@ -16,10 +16,11 @@ void	ft_strdup_test(void)
 	ft_printf("%stest string%s\n", PURPLE, NC);
 	ft_printf("-----------\n");
 // ft__strdup
-	ret = ft__strdup("salut");
+	ret = NULL;
 	ft_printf("%s*** ft_strdup ***%s\n", BLACK, NC);
+	ret = ft__strdup("salut");
 	ft_printf("%s%s%s", GREY, ret, NC);
-	ft_printf("|--> %s%p%s\n", GREY, ret, NC);
+	printf("|--> %s%p%s\n", GREY, ret, NC);
 	free(ret);
 
 // strdup
@@ -34,6 +35,12 @@ void	ft_strdup_test(void)
 	ft_printf("%stest empty string%s\n", PURPLE, NC);
 	ft_printf("-----------------\n");
 // ft__strdup
+	ret = NULL;
+	ft_printf("%s*** ft_strdup ***%s\n", BLACK, NC);
+	ret = ft__strdup("");
+	ft_printf("%s%s%s", GREY, ret, NC);
+	printf("|--> %s%p%s\n", GREY, ret, NC);
+	free(ret);
 
 // strdup
 	ret = strdup("");
@@ -42,4 +49,15 @@ void	ft_strdup_test(void)
 	ft_printf("|--> %s%p%s\n", GREY, ret, NC);
 	free(ret);
 
+// test NULL
+
+	ft_printf("%stest empty string%s\n", PURPLE, NC);
+	ft_printf("-----------------\n");
+// ft__strdup
+	ret = NULL;
+	ft_printf("%s*** ft_strdup ***%s\n", BLACK, NC);
+	ret = ft__strdup(NULL);
+	ft_printf("%s%s%s", GREY, ret, NC);
+	printf("|--> %s%p%s\n", GREY, ret, NC);
+	free(ret);
 }
