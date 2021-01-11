@@ -12,8 +12,6 @@ ft__strcmp:
 loop:
 	mov		r9b, [rdi + rcx]	; put s1[i] in a buffer
 	mov		r10b, [rsi + rcx]	; put s2[i] in a buffer
-	sub		r9b, 128	; convert s1[i] in unsigned char
-	sub		r10b, 128	; convert s2[i] in unsigned char
 	cmp		r9b, r10b
 	jne	end	; if s1[i] != s2[i] --> break
 	cmp		r9b, 0
