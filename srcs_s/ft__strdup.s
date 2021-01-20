@@ -6,7 +6,7 @@
 
 ft__strdup:
 	xor		rax, rax	; init return value
-	xor		r9, r9		; init buffer
+	xor		rbx, rbx		; init buffer
 
 	cmp		rdi, 0
 	je	error	; if the string to dup is NULL --> error
@@ -14,12 +14,12 @@ ft__strdup:
 	call	ft__strlen
 	inc		rax	; count the '\0' of the string to dup
 
-	mov	r8, rdi		; save the string to dup
+	mov	rbx, rdi		; save the string to dup
 	mov		rdi, rax	; first malloc's av : string's len
 	call	malloc
 	cmp		rax, 0
 	je	error	; if malloc return NULL, the fuction will return NULL
-	mov	rsi, r8
+	mov	rsi, rbx
 	mov	rdi, rax
 	
 	call	ft__strcpy
