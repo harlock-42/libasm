@@ -45,9 +45,9 @@ OBJ_ASM_NAME		=	$(SRC_ASM_NAME:.s=.o)
 
 OBJ_C_NAME		=	$(SRC_C_NAME:.c=.o)
 
-SRC_ASM_PATH		=	./srcs_asm
+SRC_ASM_PATH		=	./srcs_s
 
-SRC_C_PATH		=	./srcs_c
+SRC_C_PATH		=	./srcs_test
 
 OBJ_ASM_PATH		=	./.obj_asm
 
