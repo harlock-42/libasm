@@ -33,7 +33,7 @@ void		ft_write_test(void)
 	test[nb_test - 1] = NULL;
 
 	i = 0;
-	end = len_test(test) - 1;
+	end = len_test(test);
 
 	ft_printf("%sft_write%s\n", GREEN, NC);
 	ft_printf("%s********%s\n", GREEN, NC);
